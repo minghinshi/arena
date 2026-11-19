@@ -36,7 +36,7 @@ certifi==2026.7.22
 charset-normalizer==3.5.2
     # via requests
 circuitsvis @ git+https://github.com/ARENA-education/CircuitsVis.git@3e82cd4b0c358be6dea7db6f05516a0ac323b745#subdirectory=python
-    # via arena (pyproject.toml)
+    # via arena-lib (pyproject.toml)
 click==8.5.0
     # via
     #   huggingface-hub
@@ -48,7 +48,7 @@ comm==0.2.3
     #   ipywidgets
 datasets==5.1.0
     # via
-    #   arena (pyproject.toml)
+    #   arena-lib (pyproject.toml)
     #   transformer-lens
 debugpy==1.8.22
     # via ipykernel
@@ -56,11 +56,11 @@ dill==0.4.1
     # via
     #   datasets
     #   multiprocess
-eindex-callum @ git+https://github.com/ARENA-education/eindex.git@525036be2b1a32e77dc5a7dd5f0e6a7bc8a4fdc8
-    # via arena (pyproject.toml)
+eindex-callum @ git+https://github.com/ARENA-education/eindex.git@df3bdd12e4f69fc80b9f2f0861429bdaefcffa57
+    # via arena-lib (pyproject.toml)
 einops==0.8.2
     # via
-    #   arena (pyproject.toml)
+    #   arena-lib (pyproject.toml)
     #   transformer-lens
 executing==2.3.0
     # via stack-data
@@ -113,7 +113,7 @@ idna==3.20
 importlib-metadata==5.2.0
     # via circuitsvis
 ipykernel==7.4.0
-    # via arena (pyproject.toml)
+    # via arena-lib (pyproject.toml)
 ipython==9.17.1
     # via
     #   ipykernel
@@ -121,10 +121,10 @@ ipython==9.17.1
 ipython-pygments-lexers==1.1.1
     # via ipython
 ipywidgets==8.1.9
-    # via arena (pyproject.toml)
+    # via arena-lib (pyproject.toml)
 jaxtyping==0.3.11
     # via
-    #   arena (pyproject.toml)
+    #   arena-lib (pyproject.toml)
     #   transformer-lens
 jedi==0.20.1
     # via ipython
@@ -227,7 +227,7 @@ platformdirs==4.13.0
     #   jupyter-core
     #   wandb
 plotly==7.1.0
-    # via arena (pyproject.toml)
+    # via arena-lib (pyproject.toml)
 prompt-toolkit==3.0.53
     # via ipython
 propcache==0.5.4
@@ -328,7 +328,7 @@ tokenizers==0.23.3
     # via transformers
 torch==2.14.0+rocm10.1.0
     # via
-    #   arena (pyproject.toml)
+    #   arena-lib (pyproject.toml)
     #   accelerate
     #   amd-torch-device-gfx1152
     #   amd-torch-device-gfx115x
@@ -337,10 +337,10 @@ torch==2.14.0+rocm10.1.0
     #   torchvision
     #   transformer-lens
 torchaudio==2.11.0.3+rocm10.1.0
-    # via arena (pyproject.toml)
+    # via arena-lib (pyproject.toml)
 torchvision==0.29.0a0+rocm10.1.0
     # via
-    #   arena (pyproject.toml)
+    #   arena-lib (pyproject.toml)
     #   amd-torchvision-device-gfx1152
 tornado==6.5.10
     # via
@@ -353,7 +353,7 @@ tqdm==4.70.1
     #   transformer-lens
     #   transformers
 trackio==0.45.0
-    # via arena (pyproject.toml)
+    # via arena-lib (pyproject.toml)
 traitlets==5.16.1
     # via
     #   ipykernel
@@ -363,10 +363,10 @@ traitlets==5.16.1
     #   jupyter-core
     #   matplotlib-inline
 transformer-lens==4.2.0
-    # via arena (pyproject.toml)
+    # via arena-lib (pyproject.toml)
 transformers==5.19.0
     # via
-    #   arena (pyproject.toml)
+    #   arena-lib (pyproject.toml)
     #   transformer-lens
     #   transformers-stream-generator
 transformers-stream-generator==0.0.5

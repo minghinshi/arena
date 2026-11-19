@@ -1,6 +1,10 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "arena"
-version = "0.1.0"
+name = "arena-lib"
+version = "0.0.0"
 dependencies = [
     "datasets",
     "einops",
@@ -32,6 +36,12 @@ extend-select = ["I"]
 # as r'''  -- an inconsistent mix that forces \'\'\' escapes back into the masters.
 # "preserve" leaves existing quotes exactly as written.
 quote-style = "preserve"
+
+[tool.setuptools]
+packages = ["arena_lib"]
+
+[tool.setuptools.package-data]
+arena_lib = ["*.json"]
 
 [[tool.uv.index]]
 name = "amd-rocm"
