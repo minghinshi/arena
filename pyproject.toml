@@ -1,26 +1,28 @@
-# `pip install -e .` (the install scripts run it) makes `import arena_lib` work from any notebook or script in a clone.
-# Only arena_lib is a package; the course's own dependencies are in requirements.txt.
-[build-system]
-requires = ["setuptools>=64"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "arena-lib"
-version = "0.0.0"
-description = "Code shared across the ARENA chapters"
-requires-python = ">=3.10"
-
-[tool.setuptools]
-packages = ["arena_lib"]
-
-[tool.setuptools.package-data]
-arena_lib = ["*.json"]
+name = "arena"
+version = "0.1.0"
+dependencies = [
+    "datasets",
+    "einops",
+    "ipykernel",
+    "ipywidgets",
+    "jaxtyping",
+    "plotly",
+    "torch[device-gfx1152]==2.14.0+rocm10.1.0",
+    "torchvision[device-gfx1152]==0.29.0a0+rocm10.1.0",
+    "torchaudio==2.11.0.3+rocm10.1.0",
+    "trackio",
+    "transformers",
+    "transformer_lens",
+    "circuitsvis @ git+https://github.com/ARENA-education/CircuitsVis.git@arena-tl4.1#subdirectory=python",
+    "eindex-callum @ git+https://github.com/ARENA-education/eindex.git",
+]
 
 [tool.ruff]
 line-length = 100
 
 [tool.ruff.lint]
-ignore = ["E722", "E731", "F722", "E402", "E741"]
+ignore = ["E722", "E731", "F722", "E402", "E741", "B018"]
 extend-select = ["I"]
 
 [tool.ruff.format]
@@ -30,3 +32,12 @@ extend-select = ["I"]
 # as r'''  -- an inconsistent mix that forces \'\'\' escapes back into the masters.
 # "preserve" leaves existing quotes exactly as written.
 quote-style = "preserve"
+
+[[tool.uv.index]]
+name = "amd-rocm"
+url = "https://stable.repo.amd.com/rocm/whl-next/"
+
+[tool.uv.sources]
+torch = { index = "amd-rocm" }
+torchvision = { index = "amd-rocm" }
+torchaudio = { index = "amd-rocm" }
